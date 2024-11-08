@@ -20869,14 +20869,16 @@ class mPDF
 						break;
 					case 'PADDING-LEFT':
 						if (($tag == 'UL' || $tag == 'OL') && $v == 'auto') {
-							$this->blk[$this->blklvl]['padding_left'] = 'auto';
+							// $this->blk[$this->blklvl]['padding_left'] = 'auto';
+							$this->blk[$this->blklvl]['padding_left'] = 0;
 							break;
 						}
 						$this->blk[$this->blklvl]['padding_left'] = $this->ConvertSize($v, $this->blk[$prevlevel]['inner_width'], $this->FontSize, false);
 						break;
 					case 'PADDING-RIGHT':
 						if (($tag == 'UL' || $tag == 'OL') && $v == 'auto') {
-							$this->blk[$this->blklvl]['padding_right'] = 'auto';
+							// $this->blk[$this->blklvl]['padding_right'] = 'auto';
+							$this->blk[$this->blklvl]['padding_right'] = 0;
 							break;
 						}
 						$this->blk[$this->blklvl]['padding_right'] = $this->ConvertSize($v, $this->blk[$prevlevel]['inner_width'], $this->FontSize, false);
